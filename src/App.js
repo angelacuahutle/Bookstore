@@ -14,10 +14,10 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Routes>
+        <Navbar>
           <Route path="/" element={<Books />} />
           <Route path="/categories" element={<Categories />} />
-        </Routes>
+        </Navbar>
       </BrowserRouter>
     );
   }

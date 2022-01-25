@@ -1,4 +1,5 @@
 import React from 'react';
+import AddBook from './CreateNewBook';
 
 function Books() {
   return (
@@ -10,6 +11,7 @@ function Books() {
           <input className="form-control" type="text" placeholder="Write a Authot" />
         </form>
       </div>
+      <AddBook />
       <div className="d-flex justify-content-center mt-5">
         <table>
           <tr>
@@ -78,3 +80,5 @@ function Books() {
     </>
   );
 }
+
+export default Books;
