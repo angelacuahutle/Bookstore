@@ -2,11 +2,11 @@ import React from 'react';
 
 function Categories() {
   return (
-    <>
+    <div>
       <h3>
-        Under construction
+        Work in progress!
       </h3>
-    </>
+    </div>
   );
 }
 

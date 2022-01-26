@@ -4,13 +4,6 @@ import AddBook from './CreateNewBook';
 function Books() {
   return (
     <>
-      <div className="d-flex justify-content-center mt-5">
-        <form>
-          <h2>Add a Book</h2>
-          <input className="form-control" type="text" placeholder="Write a book" />
-          <input className="form-control" type="text" placeholder="Write a Authot" />
-        </form>
-      </div>
       <AddBook />
       <div className="d-flex justify-content-center mt-5">
         <table>
@@ -75,6 +68,18 @@ function Books() {
 
             <th><button type="button" className="btn btn-outline-dark btn-sm">Remove</button></th>
           </tr>
+          <tfoot>
+            <tr>
+              <th>
+                <b>
+                  &quot;Oval&quot;
+                </b>
+              </th>
+              <th>by</th>
+              <th>&quot; Elvia Wilk&quot;</th>
+              <th><button type="button" className="btn btn-outline-dark btn-sm">Remove</button></th>
+            </tr>
+          </tfoot>
         </table>
       </div>
     </>

@@ -12,10 +12,10 @@ function Navbar() {
         </Link>
         <FontAwesomeIcon icon={faBook} />
       </div>
-      <Link to="/" className="text-black text-decoration-none">Books</Link>
-      <br />
-      <Link to="/categories">Categories</Link>
-      <Link to="/categories" className="text-black text-decoration-none">Categories</Link>
+      <div>
+        <Link to="/" className="mr-2 p-3 h5 text-black text-decoration-none">Books</Link>
+        <Link to="/categories" className="mr-2 p-3 h5 text-black text-decoration-none">Categories</Link>
+      </div>
     </nav>
   );
 }

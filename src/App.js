@@ -14,13 +14,14 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Navbar>
+        <Navbar />
+        <Routes>
           <Route path="/" element={<Books />} />
           <Route path="/categories" element={<Categories />} />
-        </Navbar>
+        </Routes>
       </BrowserRouter>
     );
   }
 }
 
-export default App();
+export default App;
