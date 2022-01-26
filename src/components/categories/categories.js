@@ -4,7 +4,7 @@ function Categories() {
   return (
     <div>
       <h3>
-        Work in progress!
+        Under construction!
       </h3>
     </div>
   );
