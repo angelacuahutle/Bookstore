@@ -2,13 +2,17 @@ import React from 'react';
 
 function AddBook() {
   return (
-    <div className="d-flex justify-content-center mt-5">
-      <form>
-        <h2>Add a Book</h2>
-        <input className="form-control" type="text" placeholder="Write a book" />
-        <input className="form-control" type="text" placeholder="Write a Authot" />
-      </form>
-    </div>
+    <form>
+      <h2>ADD A NEW BOOK!</h2>
+      <input type="text" />
+      <select>
+        <option value="a">Option 1</option>
+        <option value="a">Option 2</option>
+        <option value="a">Option 3</option>
+        <option value="a">Option 4</option>
+      </select>
+      <button type="submit">ADD A BOOK</button>
+    </form>
   );
 }
 
