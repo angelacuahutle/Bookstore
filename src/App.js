@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar/navbar';
-import Books from './components/books/books';
-import 'bootstrap/dist/css/bootstrap.css';
+import { useDispatch } from 'react-redux';
 import Categories from './components/categories/categories';
+import Books from './components/books/books';
+import Navbar from './components/navbar/navbar';
+import { getBooksAsync } from './redux/Books/Books';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.setState = {};
-  }
+function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooksAsync());
+  }, []);
 
-  render() {
-    return (
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Books />} />
-          <Route path="/categories" element={<Categories />} />
-        </Routes>
-      </BrowserRouter>
-    );
-  }
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
