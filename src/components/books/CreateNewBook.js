@@ -5,7 +5,7 @@ import { addBookAsync } from '../../redux/Books/Books';
 
 function NewBook() {
   const [title, setTitle] = useState('');
-  const [category, setCategory] = useState('Action 1');
+  const [category, setCategory] = useState('Action');
 
   const dispatch = useDispatch();
 
@@ -30,21 +30,32 @@ function NewBook() {
   };
 
   return (
-    <form>
-      <h2>ADD A NEW BOOK!</h2>
+    <form className="mx-20 border-t-2">
+      <h2 className="text-2xl font-bold text-gray-500 my-5">ADD NEW BOOK</h2>
       <input
+        className="px-3 py-2 mr-10 border border-zinc-200 rounded w-3/5"
         type="text"
         value={title}
         onChange={TitleHandler}
-        placeholder="Title"
+        placeholder="Book Title"
       />
-      <select value={category} onChange={CategoryHandler}>
-        <option value="Action 1">Science Fiction</option>
-        <option value="Action 2">Novele</option>
-        <option value="Action 3">Art</option>
-        <option value="Action 4">Tech</option>
+      <select
+        value={category}
+        onChange={CategoryHandler}
+        className="px-3 py-2 mr-10 border border-zinc-200 rounded w-1/5 text-gray-400"
+      >
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Art">Art</option>
+        <option value="Novele">Novele</option>
+        <option value="Novele">Anime</option>
       </select>
-      <button type="submit" onClick={submitBookToStore}>ADD A BOOK</button>
+      <button
+        type="submit"
+        onClick={submitBookToStore}
+        className="bg-sky-500 text-white px-10 py-2 rounded w-auto"
+      >
+        ADD A BOOK
+      </button>
     </form>
   );
 }
