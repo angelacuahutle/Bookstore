@@ -4,6 +4,10 @@
 # Bookstore
 This project will lay foundations for a Bookstore website. I will create a React and Redux app. Created structure files using the "feature folder" approach. In addition, the set up routing was made using react.
 
+
+![screenshot](./booksApp.png)
+
+
 ## Built With
 
 - Javascript/HTML5/CSS3
